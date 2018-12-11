@@ -13,3 +13,11 @@
 - php artisan serve
 
 Login as super admin: admin@admin.com, password: 123456
+
+## Running test:
+- Create your testing database using MySQL client
+- cp .env .env.testing
+- Add your local database details to the .env.testing file.
+- In the Terminal / Command Line, navigate to this directory and run the following commands:
+	* php artisan migrate --env=testing
+	* vendor/bin/phpunit --coverage-html ./reports
